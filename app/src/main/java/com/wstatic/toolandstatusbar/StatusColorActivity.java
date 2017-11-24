@@ -49,9 +49,11 @@ public class StatusColorActivity extends AppCompatActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_status_textcolor_black:
+                /**StatusBar的颜色是亮色，字体应该为黑色*/
                 ToolAndStatusBarHelp.getInstance().setStatusBarColor(this, R.color.color_statusbar,true);
                 break;
             case R.id.btn_status_textcolor_white:
+                /**StatusBar的颜色是暗色，字体应该为白色*/
                 ToolAndStatusBarHelp.getInstance().setStatusBarColor(this, R.color.color_statusbar,false);
                 break;
         }

@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     Button btnToolStatusDifferent;
     @BindView(R.id.btn_status_Transparent)
     Button btnStatusTransparent;
+    @BindView(R.id.btn_fragment)
+    Button btnFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,20 +30,23 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.btn_tool_status, R.id.btn_tool_status_Coll, R.id.btn_tool_status_different, R.id.btn_status_Transparent})
+    @OnClick({R.id.btn_tool_status, R.id.btn_tool_status_Coll,R.id.btn_fragment, R.id.btn_tool_status_different, R.id.btn_status_Transparent})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_tool_status:
-                startActivity(new Intent(this,ToolStatusActivity.class));
+                startActivity(new Intent(this, ToolStatusActivity.class));
                 break;
             case R.id.btn_tool_status_Coll:
-                startActivity(new Intent(this,ToolStatusCollActivity.class));
+                startActivity(new Intent(this, ToolStatusCollActivity.class));
                 break;
             case R.id.btn_tool_status_different:
-                startActivity(new Intent(this,StatusColorActivity.class));
+                startActivity(new Intent(this, StatusColorActivity.class));
                 break;
             case R.id.btn_status_Transparent:
-                startActivity(new Intent(this,StatusTransparentActivity.class));
+                startActivity(new Intent(this, StatusTransparentActivity.class));
+                break;
+            case R.id.btn_fragment:
+                startActivity(new Intent(this, FragmentTestActivity.class));
                 break;
         }
     }
