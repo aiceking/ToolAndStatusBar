@@ -14,4 +14,20 @@
         android:minHeight="?attr/actionBarSize">
 
     </android.support.v7.widget.Toolbar>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="StatusBar字体深色"
+        android:id="@+id/btn_status_textcolor_black"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="StatusBar字体浅色"
+        android:id="@+id/btn_status_textcolor_white"/>
 </LinearLayout>
