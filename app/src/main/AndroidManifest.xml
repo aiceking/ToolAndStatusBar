@@ -16,6 +16,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ToolStatusActivity"
+            android:theme="@style/TranslucentStatusBar"/>
+        <activity android:name=".ToolStatusCollActivity"
+            android:theme="@style/TranslucentStatusBar"/>
+        <activity android:name=".StatusColorActivity"
+            android:theme="@style/TranslucentStatusBar"/>
+        <activity android:name=".StatusTransparentActivity"
+            android:theme="@style/TranslucentStatusBar">
+
+        </activity>
     </application>
 
 </manifest>
