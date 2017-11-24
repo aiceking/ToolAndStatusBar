@@ -11,4 +11,8 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+    <style name="CollTitle">
+        <item name="android:textSize">20sp</item>
+    </style>
+
 </resources>

@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="color_toolbar">#ff9800</color>
     <color name="color_statusbar">#aa00ff</color>
+    <color name="color_blick">#000000</color>
 </resources>
