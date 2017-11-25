@@ -8,7 +8,6 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.LinearLayout;
 
-import com.wstatic.toolandstatusbar.fragment.CollFragment;
 import com.wstatic.toolandstatusbar.fragment.CommonFragment;
 
 import java.util.ArrayList;
@@ -36,14 +35,9 @@ public class FragmentTestActivity extends AppCompatActivity {
         tablayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                CommonFragment fragment = new CommonFragment();
-                Bundle bundle = new Bundle();
-                bundle.putString("title", list_titles.get(tab.getPosition()));
-                bundle.putInt("position", tab.getPosition());
-                fragment.setArguments(bundle);
                 FragmentManager fm = getSupportFragmentManager();
                 FragmentTransaction transaction = fm.beginTransaction();
-                transaction.replace(R.id.linear_parent, fragment);
+                transaction.replace(R.id.linear_parent, list_fragments.get(tab.getPosition()));
                 transaction.commit();
             }
 
@@ -67,7 +61,8 @@ public class FragmentTestActivity extends AppCompatActivity {
         list_fragments = new ArrayList<>();
         for (int i = 0; i < list_titles.size(); i++) {
             tablayout.addTab(tablayout.newTab().setText(list_titles.get(i)));
-            CommonFragment fragment = new CommonFragment();
+            Fragment fragment;
+                fragment = new CommonFragment();
             Bundle bundle = new Bundle();
             bundle.putString("title", list_titles.get(i));
             bundle.putInt("position", i);

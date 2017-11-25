@@ -14,7 +14,6 @@ import com.wstatic.toolandstatusbarlibrary.ToolAndStatusBarHelp;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.Unbinder;
 
 /**
  * Created by static on 2017/11/25/025.
@@ -33,13 +32,18 @@ public class CommonFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
-            rootView = inflater.inflate(R.layout.activity_tool_status, container, false);
+        if (null != rootView) {
+            ViewGroup parent = (ViewGroup) rootView.getParent();
+            if (null != parent) {
+                parent.removeView(rootView);
+            }
+        } else {
+            rootView = inflater.inflate(R.layout.fragment_common_bar, container, false);
             ButterKnife.bind(this, rootView);
-            title=getArguments().getString("title");
-            position=getArguments().getInt("position");
-            ToolAndStatusBarHelp.getInstance().setToolAndStatusBarColor(this,rootView, Colors[position]);
-
+            title = getArguments().getString("title");
+            position = getArguments().getInt("position");
+        }
+        ToolAndStatusBarHelp.getInstance().setToolAndStatusBarColor(this, rootView, Colors[position]);
         return rootView;
     }
 
