@@ -28,7 +28,8 @@
         <activity
             android:name=".StatusTransparentActivity"
             android:theme="@style/TranslucentStatusBar"></activity>
-        <activity android:name=".FragmentTestActivity"></activity>
+        <activity android:name=".FragmentTestActivity"
+            android:theme="@style/TranslucentStatusBar"></activity>
     </application>
 
 </manifest>
