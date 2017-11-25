@@ -45,4 +45,5 @@
         android:textAllCaps="false"
         android:text="在Fragment中使用"
         android:id="@+id/btn_fragment"/>
+
 </LinearLayout>

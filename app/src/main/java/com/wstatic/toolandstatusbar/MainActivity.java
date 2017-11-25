@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.btn_fragment)
     Button btnFragment;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.btn_tool_status, R.id.btn_tool_status_Coll,R.id.btn_fragment, R.id.btn_tool_status_different, R.id.btn_status_Transparent})
+    @OnClick({R.id.btn_tool_status, R.id.btn_tool_status_Coll, R.id.btn_fragment, R.id.btn_tool_status_different, R.id.btn_status_Transparent})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_tool_status:
