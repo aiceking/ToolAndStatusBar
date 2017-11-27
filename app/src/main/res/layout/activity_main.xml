@@ -45,5 +45,12 @@
         android:textAllCaps="false"
         android:text="在Fragment中使用"
         android:id="@+id/btn_fragment"/>
-
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="带DrawLayout的使用"
+        android:id="@+id/btn_draw"/>
 </LinearLayout>

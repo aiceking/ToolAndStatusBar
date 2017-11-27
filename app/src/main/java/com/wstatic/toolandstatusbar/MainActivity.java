@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     Button btnStatusTransparent;
     @BindView(R.id.btn_fragment)
     Button btnFragment;
+    @BindView(R.id.btn_draw)
+    Button btnDraw;
 
 
     @Override
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.btn_tool_status, R.id.btn_tool_status_Coll, R.id.btn_fragment, R.id.btn_tool_status_different, R.id.btn_status_Transparent})
+    @OnClick({R.id.btn_tool_status, R.id.btn_draw,R.id.btn_tool_status_Coll, R.id.btn_fragment, R.id.btn_tool_status_different, R.id.btn_status_Transparent})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_tool_status:
@@ -48,6 +50,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_fragment:
                 startActivity(new Intent(this, FragmentTestActivity.class));
+                break;
+            case R.id.btn_draw:
+                startActivity(new Intent(this, DrawerActivity.class));
                 break;
         }
     }
