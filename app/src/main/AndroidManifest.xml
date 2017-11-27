@@ -33,8 +33,7 @@
             android:theme="@style/TranslucentStatusBar" />
         <activity
             android:name=".DrawerActivity"
-            android:label="@string/title_activity_drawer"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/TranslucentStatusBar"></activity>
     </application>
 
 </manifest>
