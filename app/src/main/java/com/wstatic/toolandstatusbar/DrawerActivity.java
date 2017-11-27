@@ -34,12 +34,6 @@ public class DrawerActivity extends AppCompatActivity {
         setToolBar();
     }
     private void setToolBar() {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
-            LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT);
-            lp.setMargins(0,dip2px(this,25),0,0);
-            toolbar.setLayoutParams(lp);
-        }
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
