@@ -2,21 +2,17 @@ package com.wstatic.toolandstatusbar;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.LinearLayout;
 
-import com.wstatic.toolandstatusbarlibrary.ToolAndStatusBarHelp;
+import com.wstatic.toolandstatusbarlibrary.ToolAndStatusBarMagager;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 public class DrawerActivity extends AppCompatActivity {
 
@@ -30,7 +26,7 @@ public class DrawerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drawer);
         ButterKnife.bind(this);
-        ToolAndStatusBarHelp.getInstance().setStatusBarColor(this, R.color.color_toolbar);
+        ToolAndStatusBarMagager.getInstance().setStatusBarColor(this, R.color.color_toolbar);
         setToolBar();
     }
     private void setToolBar() {

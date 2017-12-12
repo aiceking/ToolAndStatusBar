@@ -5,25 +5,35 @@ import android.support.annotation.ColorRes;
 import android.support.v4.app.Fragment;
 import android.view.View;
 
-import com.githang.statusbar.StatusBarCompat;
-import com.kelin.translucentbar.library.TranslucentBarManager;
+import com.wstatic.toolandstatusbarlibrary.statusbar.StatusBarCompat;
+import com.wstatic.toolandstatusbarlibrary.translucentBar.TranslucentBarManager;
 
 /**
  * Created by static on 2017/11/24/024.
  */
 
-public class ToolAndStatusBarHelp {
-    private static ToolAndStatusBarHelp toolAndStatusBarHelp;
-    private ToolAndStatusBarHelp(){}
-    public static ToolAndStatusBarHelp getInstance(){
-        if (toolAndStatusBarHelp==null){
-            synchronized (ToolAndStatusBarHelp.class){
-                if (toolAndStatusBarHelp==null){
-                    toolAndStatusBarHelp=new ToolAndStatusBarHelp();
+public class ToolAndStatusBarMagager {
+    private static ToolAndStatusBarMagager toolAndStatusBarMagager;
+    private int toolbarHeight;
+
+    public int getToolbarHeight() {
+        return toolbarHeight;
+    }
+
+    public void setToolbarHeight(int toolbarHeight) {
+        this.toolbarHeight = toolbarHeight;
+    }
+
+    private ToolAndStatusBarMagager(){}
+    public static ToolAndStatusBarMagager getInstance(){
+        if (toolAndStatusBarMagager ==null){
+            synchronized (ToolAndStatusBarMagager.class){
+                if (toolAndStatusBarMagager ==null){
+                    toolAndStatusBarMagager =new ToolAndStatusBarMagager();
                 }
             }
         }
-        return toolAndStatusBarHelp;
+        return toolAndStatusBarMagager;
     }
     /**
      * ToolBar和StatusBar颜色一致的沉浸式(Activity)

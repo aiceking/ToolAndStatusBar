@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.wstatic.toolandstatusbar.R;
-import com.wstatic.toolandstatusbarlibrary.ToolAndStatusBarHelp;
+import com.wstatic.toolandstatusbarlibrary.ToolAndStatusBarMagager;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -43,7 +43,7 @@ public class CommonFragment extends Fragment {
             title = getArguments().getString("title");
             position = getArguments().getInt("position");
         }
-        ToolAndStatusBarHelp.getInstance().setToolAndStatusBarColor(this, rootView, Colors[position]);
+        ToolAndStatusBarMagager.getInstance().setToolAndStatusBarColor(this, rootView, Colors[position]);
         return rootView;
     }
 

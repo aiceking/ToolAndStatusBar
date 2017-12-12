@@ -8,7 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.View;
 
-import com.wstatic.toolandstatusbarlibrary.ToolAndStatusBarHelp;
+import com.wstatic.toolandstatusbarlibrary.ToolAndStatusBarMagager;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -28,7 +28,7 @@ public class ToolStatusCollActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tool_status_coll);
         ButterKnife.bind(this);
         setToolBar();
-        ToolAndStatusBarHelp.getInstance().setToolAndStatusBarColor(this, R.color.color_toolbar);
+        ToolAndStatusBarMagager.getInstance().setToolAndStatusBarColor(this, R.color.color_toolbar);
     }
 
     private void setToolBar() {

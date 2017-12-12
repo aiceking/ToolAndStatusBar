@@ -3,6 +3,7 @@
     package="com.wstatic.toolandstatusbar">
 
     <application
+        android:name=".application.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -18,19 +19,19 @@
         </activity>
         <activity
             android:name=".ToolStatusActivity"
-            android:theme="@style/TranslucentStatusBar" />
+            android:theme="@style/AppTheme.TranslucentStatusBar" />
         <activity
             android:name=".ToolStatusCollActivity"
-            android:theme="@style/TranslucentStatusBar" />
+            android:theme="@style/AppTheme.TranslucentStatusBar" />
         <activity
             android:name=".StatusColorActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".StatusTransparentActivity"
-            android:theme="@style/TranslucentStatusBar" />
+            android:theme="@style/AppTheme.TranslucentStatusBar" />
         <activity
             android:name=".FragmentTestActivity"
-            android:theme="@style/TranslucentStatusBar" />
+            android:theme="@style/AppTheme.TranslucentStatusBar" />
         <activity
             android:name=".DrawerActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>

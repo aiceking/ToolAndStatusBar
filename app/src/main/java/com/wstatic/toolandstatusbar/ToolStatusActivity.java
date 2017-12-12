@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-import com.wstatic.toolandstatusbarlibrary.ToolAndStatusBarHelp;
+import com.wstatic.toolandstatusbarlibrary.ToolAndStatusBarMagager;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -14,14 +14,14 @@ public class ToolStatusActivity extends AppCompatActivity {
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tool_status);
         ButterKnife.bind(this);
         setToolBar();
-        ToolAndStatusBarHelp.getInstance().setToolAndStatusBarColor(this, R.color.color_toolbar);
+        ToolAndStatusBarMagager.getInstance().setToolAndStatusBarColor(this, R.color.color_toolbar);
+
     }
 
     private void setToolBar() {
@@ -37,4 +37,5 @@ public class ToolStatusActivity extends AppCompatActivity {
             }
         });
     }
+
 }
