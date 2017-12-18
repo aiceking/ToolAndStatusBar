@@ -1,6 +1,7 @@
 package com.wstatic.toolandstatusbar;
 
 import android.os.Bundle;
+
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -11,7 +12,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class ToolStatusActivity extends AppCompatActivity {
-
     @BindView(R.id.toolbar)
     Toolbar toolbar;
     @Override
@@ -21,9 +21,7 @@ public class ToolStatusActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         setToolBar();
         ToolAndStatusBarMagager.getInstance().setToolAndStatusBarColor(this, R.color.color_toolbar);
-
     }
-
     private void setToolBar() {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -37,5 +35,6 @@ public class ToolStatusActivity extends AppCompatActivity {
             }
         });
     }
+
 
 }
